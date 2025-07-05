@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Table(name = "Users")//since user is a registered keyword
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +26,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole role=UserRole.USER;
     @CreationTimestamp
-    private LocalDateTime creadtedAt;
+    private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 }
